@@ -57,6 +57,16 @@ export class UsersService {
     return existingUser;
   }
 
+  async findOne(id: number) {
+    const existingUser = await this.usersRepository.findOne({ where: { id } });
+
+    if (!existingUser) {
+      throw new NotFoundException('User not found.');
+    }
+
+    return existingUser;
+  }
+
   // async update(id: number, attrs: Partial<User>) {
   //   const existingUser = await this.usersRepository.findOne({ where: { id } });
 
