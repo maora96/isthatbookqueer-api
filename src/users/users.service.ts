@@ -66,26 +66,4 @@ export class UsersService {
 
     return existingUser;
   }
-
-  // async update(id: number, attrs: Partial<User>) {
-  //   const existingUser = await this.usersRepository.findOne({ where: { id } });
-
-  //   if (!existingUser) {
-  //     throw new NotFoundException('User not found.');
-  //   }
-
-  //   Object.assign(existingUser, attrs);
-
-  //   return this.usersRepository.save(existingUser);
-  // }
-
-  // async remove(id: number) {
-  //   const existingUser = await this.usersRepository.findOne({ where: { id } });
-
-  //   if (!existingUser) {
-  //     throw new NotFoundException('User not found.');
-  //   }
-
-  //   return this.usersRepository.remove(existingUser);
-  // }
 }

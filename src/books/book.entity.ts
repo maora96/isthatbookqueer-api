@@ -11,8 +11,11 @@ export class Book {
   @Column()
   author: string;
 
-  @Column()
-  series: string;
+  @Column({
+    type: 'text',
+    nullable: true,
+  })
+  series: string | null;
 
   @Column()
   genres: string;
@@ -26,6 +29,12 @@ export class Book {
   @Column()
   is_queer: boolean;
 
-  @Column()
+  @Column({
+    type: 'text',
+    nullable: true,
+  })
   queer_data: string;
+
+  @Column({ default: false })
+  approved: boolean;
 }
